@@ -1,0 +1,32 @@
+package com.example;
+
+public class HolaMundo {
+    public static void main(String[] args) {
+        //enteros
+        Byte number1=1; //1byte
+        Short number2=2;//2byte
+        int number3=3;//4byte
+        Long number4=4L;//8 byte
+
+//punto flotante
+        Float decimal1=4.9f;
+        Double decimal2=4.99d;
+
+//caracter
+        char caracter='a';
+
+//booleanos
+        Boolean verdadero=true;
+        Boolean falso=false;
+
+//cadenas de texto
+        String nombre= "alan";
+        String apellido="satre";
+
+//tipos envoltorio
+        Integer numero= null;
+        Long numero2= 2L;
+
+
+    }
+}
