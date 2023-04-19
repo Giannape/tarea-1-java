@@ -1,0 +1,30 @@
+package com.example;
+
+import java.util.Scanner;
+
+public class IVAIncluido {
+    public static double calcularIVA(double p){
+
+        double IVA;
+        IVA = p* 0.19;
+        return IVA;
+
+    }
+    public static void main(String[] args) {
+        
+
+        Scanner lector =new Scanner(System.in);
+
+        double precioDeLaCompra, IVA;
+        System.out.println("ingrese el precio total de la compra: ");
+        precioDeLaCompra=lector.nextDouble();
+
+        IVA=calcularIVA(precioDeLaCompra);
+        System.out.println("el precio total sin IVA es de:" + precioDeLaCompra);
+
+        System.out.println("el precio a pagar (IVA incluido) es de: "+(precioDeLaCompra+IVA));
+
+
+
+    }
+}
