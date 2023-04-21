@@ -1,0 +1,12 @@
+package com.example.estructurascontrol.condicionales;
+
+public class concatenar {
+    public static void main(String[] args) {
+
+        String [] diastrabajo= {"lunes","martes","jueves"};
+
+        for(String diastrabajos : diastrabajo){
+            System.out.println("yo trabajo los dias" +" "+ diastrabajos);
+        }
+    }
+}
