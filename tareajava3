@@ -1,0 +1,63 @@
+package poo;
+
+public class SmartDevice {
+
+        String nombre;
+        String fabricante;
+        int year;
+        String color;
+
+        public SmartDevice() {
+        }
+
+        public SmartDevice(String nombre, String fabricante, int year, String color){
+            this.nombre = nombre;
+            this.fabricante = fabricante;
+            this.year = year;
+            this.color = color;
+        }
+
+
+        public static void main(String[] args) {
+
+         SmartPhone phone=new SmartPhone("iphone","apple",2010,"negro");
+         SmartWatch watch=new SmartWatch("applewatch","apple",2010,"negro");
+
+        System.out.println(phone);
+        System.out.println(watch);
+
+    }
+
+
+
+}
+
+// las otras clases hijas:
+package poo;
+
+public class SmartPhone extends SmartDevice{
+
+    public SmartPhone (){
+
+    }
+    public SmartPhone(String nombre, String fabricante, int year, String color){
+        super(nombre, fabricante, year, color);
+    }
+}
+
+/////
+
+package poo;
+
+public class SmartWatch extends SmartDevice{
+
+
+    public SmartWatch(){
+
+    }
+    public SmartWatch(String nombre, String fabricante, int year, String color){
+        super(nombre, fabricante, year, color);
+    }
+}
+
+
