@@ -1,0 +1,211 @@
+package com.tareafinal;
+
+import org.w3c.dom.ls.LSOutput;
+
+import java.io.*;
+import java.util.*;
+
+public class miArray {
+    public static void main(String[] args) throws Exception {
+
+        String[] miArray = {"pedro", "pepe", "juan"};
+
+        for (String elemento : miArray) {
+            System.out.println(elemento);
+        }
+        System.out.println("--------------------------------");
+
+        int miArray2[][] = new int[2][4];
+        miArray2[1][0] = 10;
+        miArray2[1][1] = 20;
+        miArray2[1][2] = 30;
+        miArray2[1][3] = 40;
+
+        for (int i = 0; i < miArray2.length; i++) {
+            System.out.println("valor de i:" + i);
+
+            for (int j = 0; j < miArray2.length; j++) {
+                System.out.println("posiciones: " + i + "valor:" + j);
+                System.out.println(miArray2[i][j]);
+            }
+        }
+        System.out.println("----------------------------------------------------------------");
+
+        Vector<Integer> vector = new Vector();
+
+        vector.add(1);
+        vector.add(2);
+        vector.add(3);
+        vector.add(4);
+        vector.add(5);
+
+        vector.remove(1);
+        vector.remove(1);
+
+        System.out.println(vector);
+
+        System.out.println("--------------------------------");
+
+
+        Vector<Integer> vector2 = new Vector(1000);
+        vector.add(1);
+        vector.add(2);
+        vector.add(3);
+        vector.add(4);
+        vector.add(5);
+
+        System.out.println(vector);
+
+        System.out.println("--------------------------------");
+
+        ArrayList<String> lista = new ArrayList<String>();
+
+        lista.add("elementoA");
+        lista.add("elementoB");
+        lista.add("elementoC");
+        lista.add("elementoD");
+
+        LinkedList<String> listaEnlazada = new LinkedList<String>(lista);
+
+        System.out.println(lista);
+        System.out.println(listaEnlazada);
+
+        System.out.println("--------------------------------");
+
+
+        ArrayList<Integer> numeros = new ArrayList<Integer>();
+
+        // Rellenar el ArrayList con números del 1 al 10
+        for (int i = 1; i <= 10; i++) {
+            numeros.add(i);
+        }
+
+        // Eliminar los números pares del ArrayList
+        for (int i = numeros.size() - 1; i >= 0; i--) {
+            if (numeros.get(i) % 2 == 0) {
+                numeros.remove(i);
+            }
+        }
+
+        // Mostrar el ArrayList final
+        System.out.println(numeros);
+
+        System.out.println("--------------------------------");
+
+
+                try {
+                    DividePorCero(10, 0);
+                } catch (ArithmeticException e) {
+                    System.out.println("Esto no puede hacerse");
+                } finally {
+                    System.out.println("Demo de código");
+                }
+            }
+
+            public static void DividePorCero(int a, int b) throws ArithmeticException, IOException {
+                if (b == 0) {
+                    throw new ArithmeticException();
+                } else {
+                    int result = a / b;
+                    System.out.println("El resultado es: " + result);
+                }
+
+                System.out.println("--------------------------------");
+
+
+
+                        String fileIn = "archivo_origen.txt";
+                        String fileOut = "archivo_destino.txt";
+                        copyFile(fileIn, fileOut);
+                    }
+
+                    public static void copyFile(String fileIn, String fileOut) throws IOException {
+                        InputStream inputStream = null;
+                        PrintStream printStream = null;
+
+                        try {
+                            inputStream = new FileInputStream(fileIn);
+                            printStream = new PrintStream(new FileOutputStream(fileOut));
+
+                            byte[] buffer = new byte[1024];
+                            int length;
+
+                            while ((length = inputStream.read(buffer)) > 0) {
+                                printStream.write(buffer, 0, length);
+                            }
+
+                            System.out.println("Archivo copiado exitosamente.");
+                        } catch (IOException e) {
+                            e.printStackTrace();
+                        } finally {
+                            if (inputStream != null) {
+                                inputStream.close();
+                            }
+                            if (printStream != null) {
+                                printStream.close();
+                            }
+
+                            System.out.println("------------------------------");
+
+
+                            try{
+                                InputStream in = new FileInputStream("/etc/passwd");
+                                byte[]datos= in.readAllBytes();
+
+                                PrintStream out=new PrintStream("destino.txt");
+                                out.write(datos);
+
+                            } catch (Exception e) {
+
+                                System.out.println("Exception: " + e.getMessage());
+                            }
+
+                            System.out.println("------------MY PROYECT-------------");
+
+                            try {
+                                System.out.println("......FICHEROS DE EMPLEADOS......");
+
+                                InputStream in = new FileInputStream("/empleo/candidatos");
+                                byte[]datosempleados= in.readAllBytes();
+
+                                PrintStream out=new PrintStream("empleados.txt");
+                                out.write(datosempleados);
+
+                                System.out.println("...................................");
+
+                                System.out.println("........Empleados........");
+
+                                Map<String, String> empleados = new HashMap<>();
+
+                                empleados.put("Gianna", "Perez");
+                                empleados.put("Pedro", "Santos");
+                                empleados.put("Juan", "Santiago");
+
+                                System.out.println(empleados);
+
+                                System.out.println("..........................");
+
+
+                            }catch (Exception e){
+                                System.out.println("Exception: " + e.getMessage());
+                            }
+                            System.out.println("............JEFES............");
+
+                            ArrayList<String>Listajefes=new ArrayList<String>();
+
+                            Listajefes.add("Richard Polanco");
+                            Listajefes.add("Sole Mercado");
+                            Listajefes.add("Peter Miranda");
+                            Listajefes.add("Luis Fernandez");
+                            Listajefes.add("Ana Franco");
+
+                            for(String Jefes : Listajefes){
+
+                                System.out.println(Jefes);
+                            }
+
+
+                        }
+                    }
+                }
+
